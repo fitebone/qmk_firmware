@@ -1,5 +1,10 @@
-RGBLIGHT_ENABLE = yes
+RGBLIGHT_ENABLE = no
+RGB_MATRIX_ENABLE = WS2812
+SPACE_CADET_ENABLE = yes
+GRAVE_ESC_ENABLE = no
 LTO_ENABLE = yes
+MAGIC_ENABLE = no
+COMMAND_ENABLE = no
 # If you want to change the display of OLED, you need to change here
 SRC +=  ./lib/glcdfont.c \
         ./lib/rgb_state_reader.c \

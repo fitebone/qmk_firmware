@@ -4,6 +4,9 @@
 #include "i2c.h"
 #include <string.h>
 #include "print.h"
+#ifdef ADAFRUIT_BLE_ENABLE
+#include "adafruit_ble.h"
+#endif
 #ifdef PROTOCOL_LUFA
 #include "lufa.h"
 #endif
