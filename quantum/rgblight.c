@@ -297,7 +297,7 @@ void rgblight_mode_eeprom_helper(uint8_t mode, bool write_to_eeprom) {
     }
     RGBLIGHT_SPLIT_SET_CHANGE_MODE;
     if (write_to_eeprom) {
-        eeconfig_update_rgblight(rgblight_config.raw);
+        //eeconfig_update_rgblight(rgblight_config.raw);
         dprintf("rgblight mode [EEPROM]: %u\n", rgblight_config.mode);
     } else {
         dprintf("rgblight mode [NOEEPROM]: %u\n", rgblight_config.mode);

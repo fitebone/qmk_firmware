@@ -171,7 +171,7 @@ void eeconfig_update_rgb_matrix(void) { eeprom_update_block(&rgb_matrix_config, 
 
 void eeconfig_update_rgb_matrix_default(void) {
     dprintf("eeconfig_update_rgb_matrix_default\n");
-    rgb_matrix_config.enable = 1;
+    rgb_matrix_config.enable = 0;
     rgb_matrix_config.mode   = RGB_MATRIX_STARTUP_MODE;
     rgb_matrix_config.hsv    = (HSV){RGB_MATRIX_STARTUP_HUE, RGB_MATRIX_STARTUP_SAT, RGB_MATRIX_STARTUP_VAL};
     rgb_matrix_config.speed  = RGB_MATRIX_STARTUP_SPD;
@@ -503,7 +503,7 @@ bool rgb_matrix_get_suspend_state(void) { return g_suspend_state; }
 void rgb_matrix_toggle(void) {
     rgb_matrix_config.enable ^= 1;
     rgb_task_state = STARTING;
-    eeconfig_update_rgb_matrix();
+    //eeconfig_update_rgb_matrix();
 	RGB_MATRIX_SPLIT_SET_CHANGE_MODE;
 }
 

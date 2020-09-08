@@ -1,5 +1,6 @@
 # MCU name
-MCU = atmega32u4
+MCU = STM32F303
+#MCU = atmega32u4
 
 # Bootloader selection
 #   Teensy       halfkay
@@ -9,7 +10,7 @@ MCU = atmega32u4
 #   QMK DFU      qmk-dfu
 #   ATmega32A    bootloadHID
 #   ATmega328P   USBasp
-BOOTLOADER = atmel-dfu 
+#BOOTLOADER = atmel-dfu 
 
 # Build Options
 #   change yes to no to disable
@@ -31,6 +32,9 @@ AUDIO_ENABLE = no          # Audio output on port C6
 FAUXCLICKY_ENABLE = no     # Use buzzer to emulate clicky switches
 HD44780_ENABLE = no        # Enable support for HD44780 based LCDs
 SPLIT_KEYBOARD = yes       # Split common
-LINK_TIME_OPTIMIZATION_ENABLE = yes # significantly reduce the compiled size, but disable the legacy TMK Macros and Functions features
+LINK_TIME_OPTIMIZATION_ENABLE = no # significantly reduce the compiled size, but disable the legacy TMK Macros and Functions features
+
+SERIAL_DRIVER = usart
+WS2812_DRIVER = pwm
 
 DEFAULT_FOLDER = lily58l/rev1
