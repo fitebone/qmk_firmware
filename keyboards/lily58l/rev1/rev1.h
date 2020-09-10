@@ -1,6 +1,7 @@
 #pragma once
 
 #include "lily58l.h"
+#include "eeprom.h"
 
 #ifdef OLED_DRIVER_ENABLE
     #include "ssd1306.h"
